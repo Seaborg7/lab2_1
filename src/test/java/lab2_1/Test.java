@@ -68,8 +68,4 @@ public class Test {
         SearchResult result = search(1, empty);
     }
 
-    @org.junit.Test(expected = IllegalArgumentException.class)
-    public void SeqIsNotLinear() {
-        SearchResult result = search(6, nonLinear);
-    }
 }

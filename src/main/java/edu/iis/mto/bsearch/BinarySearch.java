@@ -31,16 +31,6 @@ public class BinarySearch {
         if (seq.length == 0) {
             throw new IllegalArgumentException();
         }
-        if (seq.length >= 3) {
-            int j = 0;
-            int diff = seq[j + 1] - seq[j];
-            for (j = 1; j < seq.length - 2; j++) {
-                if (seq[j + 2] != seq[j + 1] + diff) {
-                    throw new IllegalArgumentException();
-                }
-                diff = seq[j + 1] - seq[j];
-            }
-        }
 
         while (start <= end) {
             center = (start + end) / 2;
