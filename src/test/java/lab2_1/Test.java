@@ -10,6 +10,7 @@ public class Test {
 
     private int seq[] = new int[5];
     private int singleEl[] = new int[1];
+    private int empty[] = {};
 
     @Before
     public void initTest() {
@@ -59,6 +60,11 @@ public class Test {
         SearchResult result = search(-1, seq);
         assertThat(result.isFound(), is(false));
         assertThat(result.getPosition(), is(-1));
+    }
+
+    @org.junit.Test(expected = IllegalArgumentException.class)
+    public void seqIsEmpty() {
+        SearchResult result = search(1, empty);
     }
 
 }
